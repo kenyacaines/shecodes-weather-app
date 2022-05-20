@@ -20,7 +20,9 @@ li {
   height: 19px;
   list-style: none;
 }
-
+li:first-letter {
+  text-transform: capitalize;
+}
 a {
   color: #007bff;
   text-decoration: none;
@@ -58,6 +60,5 @@ a {
   padding: 0 auto;
 }
 .current-location {
-  margin-left: -50px;
   padding: 0;
 }
