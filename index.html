@@ -17,82 +17,85 @@
     </head>
     <body>
       <div class="container">
-        <div class="weather-app">
-          <form class="search-form" id="search-form">
-            <div class="row">
-              <div class="col-6">
-                <input
-                  type="search"
-                  class="form-control shadow-sm"
-                  id="city-input"
-                  placeholder="Enter a city name"
-                  autofocus="on"
-                  autocomplete="off"
-                />
-              </div>
-              <div class="col-3">
-                <button
-                  class="btn btn-primary shadow-sm w-100"
-                  id="search-button"
-                  type="submit"
-                >
-                  Search
-                </button>
-              </div>
-              <div class="col-3">
-                <button
-                  class="btn btn-success shadow-sm w-100"
-                  id="current-location"
-                  type="submit"
-                >
-                  Current Location
-                </button>
-              </div>
-            </div>
-          </form>
-          <div class="weather-info">
-            <div class="row g-0">
-              <div class="col-6 location">
-                <h1 id="city"></h1>
-                <ul class="basic-info">
-                  <li id="date"></li>
-                  <li id="description"></li>
-                </ul>
-              </div>
-              <div class="col-6 temp-image text-end">
-                <div class="weather-visual d-inline-block text-end">
-                  <img
-                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                    alt="Cloudy icon"
-                    class="weather-icon float-start"
+        <div class="weather-app-wrapper">
+          <div class="weather-app">
+            <form id="search-form">
+              <div class="row">
+                <div class="col-6">
+                  <input
+                    type="search"
+                    class="form-control shadow-sm"
+                    id="city-input"
+                    placeholder="Enter a city name"
+                    autofocus="on"
+                    autocomplete="off"
                   />
-                  <div class="float-start">
-                    <span class="temperature" id="temp"></span>
-                    <span class="units">
-                      <a href="#" id="fahrenheit">°F</a> |
-                      <a href="#" id="celcius">°C </a>
-                    </span>
-                  </div>
+                </div>
+                <div class="col-3">
+                  <button
+                    class="btn btn-primary shadow-sm w-100"
+                    id="search-button"
+                    type="submit"
+                  >
+                    Search
+                  </button>
+                </div>
+                <div class="col-3">
+                  <button
+                    class="btn btn-success shadow-sm w-100"
+                    id="current-location"
+                    type="submit"
+                  >
+                    Current Location
+                  </button>
                 </div>
               </div>
-              <div class="col-6">
-                <ul>
-                  <li>Humidity: <span id="humidity"></span>%</li>
-                  <li>Wind: <span id="wind"></span>mph</li>
-                </ul>
+            </form>
+            <div class="weather-overview">
+              <div class="row">
+                <div class="col-6 location">
+                  <h1 id="city"></h1>
+                  <ul class="basic-info">
+                    <li id="date"></li>
+                    <li id="description"></li>
+                  </ul>
+                </div>
+                <div class="col-6 text-end">
+                  <div class="weather-temperature d-inline-block text-end">
+                    <img
+                      src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                      alt="Cloudy icon"
+                      class="float-start"
+                      id="weather-icon"
+                    />
+                    <div class="float-start">
+                      <span class="temperature" id="temp"></span>
+                      <span class="units">
+                        <a href="#" id="fahrenheit">°F</a> |
+                        <a href="#" id="celcius">°C </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <ul>
+                    <li>Humidity: <span id="humidity"></span>%</li>
+                    <li>Wind: <span id="wind"></span>mph</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
+          <small
+            ><a
+              href="https://github.com/kenyacaines/shecodes-weather-app"
+              target="_blank"
+              >Open-source code</a
+            >, by Kenya Caines</small
+          >
         </div>
-        <small
-          ><a
-            href="https://github.com/kenyacaines/shecodes-weather-app"
-            target="blank"
-            >Open-source code</a
-          >, by Kenya Caines</small
-        >
       </div>
-      <script src="src/index.js"></script>
+      <script src="src/app.js"></script>
     </body>
   </html>
 </html>
