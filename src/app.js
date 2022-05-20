@@ -27,7 +27,7 @@ function formatDay(timestamp) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[day];
 }
-function showWeatherCondition(response) {
+function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temp");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
@@ -52,15 +52,15 @@ function search(city) {
   let apiKey = "fab4debfd3c1e84b570ae548b866f1b0";
   let units = "imperial";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-  axios.get(`${apiUrl}&appid=${apiKey}`).then(showWeatherCondition);
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(displayTemperature);
 }
 
 function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#city-input").value;
+  let cityInputElement = document.querySelector("#city-input").value;
   let h1 = document.querySelector("h1");
-  h1.innerHTML = `${city}`;
-  search(city);
+  h1.innerHTML = `${cityInputElement}`;
+  search(cityInputElement);
 }
 
 function showPosition(position) {
@@ -70,7 +70,7 @@ function showPosition(position) {
   let units = "imperial";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
 
-  axios.get(apiUrl).then(showWeatherCondition);
+  axios.get(apiUrl).then(displayTemperature);
 }
 
 function getCurrentPosition() {
