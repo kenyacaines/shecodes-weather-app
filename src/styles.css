@@ -60,8 +60,20 @@ a {
   color: rgb(33, 33, 33);
   cursor: default;
 }
-.weather-temperature .active:hover{
+.weather-temperature .active:hover {
   text-decoration: none;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.weather-forecast-date {
+  font-size: 16px;
+  color: rgb(33, 33, 33);
+}
+.weather-forecast-temperatures {
+  font-size: 13px;
+  
 }
 .search-button {
   padding: 0 auto;
