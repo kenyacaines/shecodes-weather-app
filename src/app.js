@@ -82,12 +82,16 @@ function getCurrentPosition() {
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
   let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
+  fahrenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temp");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
