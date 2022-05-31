@@ -21,6 +21,28 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+                    <div class="weather-forecast-date">${day}</div>
+                    <img src="" alt="" id="weather-icontwo" width="42" />
+                    <div class="weather-forecast-temperatures">
+                      <span class="weather-forecast-temp-max"> 18° </span>
+                      <span class="weather-forecast-temp-min"> 12°</span>
+                    </div>
+                  </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -111,3 +133,4 @@ let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 search("Austin");
+displayForecast();
