@@ -28,9 +28,9 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
-
   let forecastHTML = `<div class="row">`;
   let days = ["Thu", "Fri", "Sat", "Sun"];
   days.forEach(function (day) {
@@ -49,9 +49,9 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "fab4debfd3c1e84b570ae548b866f1b0";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayTemperature(response) {
@@ -79,6 +79,7 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
   getForecast(response.data.coord);
 }
+
 function search(city) {
   let apiKey = "fab4debfd3c1e84b570ae548b866f1b0";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
@@ -95,12 +96,9 @@ function handleSubmit(event) {
 
 function showPosition(position) {
   let apiKey = "fab4debfd3c1e84b570ae548b866f1b0";
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial&appid=${apiKey}`;
 
   axios.get(apiUrl).then(displayTemperature);
-  
 }
 
 function getCurrentPosition() {
@@ -154,4 +152,3 @@ let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", displayImperial);
 
 search("Austin");
-displayForecast();
