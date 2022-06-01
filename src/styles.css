@@ -1,6 +1,7 @@
 body {
   font-family: sans-serif;
   line-height: 1.5;
+  color: #7c7c7c;
 }
 h1 {
   color: #7c7c7c;
@@ -73,7 +74,6 @@ a {
 }
 .weather-forecast-temperatures {
   font-size: 13px;
-  
 }
 .search-button {
   padding: 0 auto;

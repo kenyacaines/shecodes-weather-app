@@ -78,10 +78,17 @@
                   </div>
                 </div>
                 <div class="col-6">
-                  <ul>
-                    <li>Humidity: <span id="humidity"></span>%</li>
-                    <li>Wind: <span id="wind"></span>mph</li>
-                  </ul>
+                  <div>Humidity: <span id="humidity"></span>%</div>
+                  <div>
+                    Wind:
+                    <span>
+                      <span id="wind-speed"></span>
+                      <span id="wind-imperial" style="display: inline"
+                        >mph</span
+                      >
+                      <span id="wind-metric" style="display: none">km/h</span>
+                    </span>
+                  </div>
                 </div>
               </div>
               <div class="weather-forecast" id="forecast"></div>
