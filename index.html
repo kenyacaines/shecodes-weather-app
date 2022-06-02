@@ -33,65 +33,66 @@
                 </div>
                 <div class="col-3">
                   <button
-                    class="btn btn-primary shadow-sm w-100"
+                    class="btn shadow-sm w-"
                     id="search-button"
                     type="submit"
                   >
                     Search
                   </button>
-                </div>
-                <div class="col-3">
+                <span class="location-buton">
                   <button
-                    class="btn btn-success shadow-sm w-100"
+                    class="btn shadow-sm w-2"
                     id="current-location"
                     type="submit"
                   >
-                    Current Location
+                    📍
                   </button>
-                </div>
+                </span>
               </div>
             </form>
             <div class="weather-overview">
               <div class="row">
-                <div class="col-6 location">
+                <div class="location">
                   <h1 id="city"></h1>
                   <ul class="basic-info">
                     <li id="date"></li>
                     <li id="description"></li>
                   </ul>
                 </div>
-                <div class="col-6 text-end">
-                  <div class="weather-temperature d-inline-block text-end">
-                    <img
-                      src=""
-                      alt="weather icon"
-                      class="float-start"
-                      id="weather-icon"
-                    />
-                    <div class="float-start">
-                      <span class="temperature" id="temp"></span>
-                      <span class="units">
-                        <a href="#" id="fahrenheit" class="active">°F</a> |
-                        <a href="#" id="celsius">°C </a>
-                      </span>
-                    </div>
+              </div>
+              <div class="text-center">
+                <div class="weather-temperature d-inline-block text-end">
+                  <img
+                    src=""
+                    alt="weather icon"
+                    class="float-start"
+                    ;
+                    id="weather-icon"
+                  />
+                  <div class="float-start">
+                    <span class="temperature" id="temp"></span>
+                    <span class="units">
+                      <a href="#" id="fahrenheit" class="active">°F</a> |
+                      <a href="#" id="celsius">°C </a>
+                    </span>
                   </div>
                 </div>
-                <div class="col-6">
-                  <div class="humidity-description">
-                    Humidity: <span id="humidity"></span>%
-                  </div>
-                  <div class="wind-description">
-                    Wind:
-                    <span id="wind-speed"></span>
-                    <span id="wind-imperial" style="display: inline">mph</span>
-                    <span id="wind-metric" style="display: none">km/h</span>
-                  </div>
+              </div>
+              <div class="weather-details">
+                <div class="humidity-description">
+                  Humidity: <span id="humidity"></span>%
+                </div>
+                <div class="wind-description">
+                  Wind:
+                  <span id="wind-speed"></span>
+                  <span id="wind-imperial" style="display: inline">mph</span>
+                  <span id="wind-metric" style="display: none">km/h</span>
                 </div>
               </div>
               <div class="weather-forecast" id="forecast"></div>
             </div>
-          </div>
+            </div>
+        </div>
           <small
             ><a
               href="https://github.com/kenyacaines/shecodes-weather-app"
@@ -99,7 +100,6 @@
               >Open-source code</a
             >, by Kenya Caines</small
           >
-        </div>
       </div>
       <script src="src/app.js"></script>
     </body>
