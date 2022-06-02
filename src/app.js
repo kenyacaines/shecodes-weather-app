@@ -40,10 +40,11 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
+  console.log(response.data.daily);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row forecast-row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
@@ -62,9 +63,6 @@ function displayForecast(response) {
           <span class="weather-forecast-temperature-max" id="forecast-temp-max"> ${Math.round(
             forecastDay.temp.max
           )}° </span>
-          <span class="weather-forecast-temperature-min" id="forecast-temp-min"> ${Math.round(
-            forecastDay.temp.min
-          )}° </span>
         </div>
       </div>`;
     }
@@ -81,6 +79,7 @@ function getForecast(coordinates) {
 }
 
 function displayTemperature(response) {
+  console.log(response.data);
   let temperatureElement = document.querySelector("#temp");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
@@ -119,6 +118,8 @@ function handleSubmit(event) {
   h1.innerHTML = `${cityInputElement}`;
 
   search(cityInputElement);
+
+  document.querySelector("#city-input").value = "";
 }
 
 function showPosition(position) {
@@ -169,7 +170,7 @@ let windSpeedImperialElement = document.querySelector("#wind-imperial");
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-let currentLocation = document.querySelector("#current-location");
+let currentLocation = document.querySelector("#current-location-button");
 currentLocation.addEventListener("click", getCurrentPosition);
 
 let celsiusLink = document.querySelector("#celsius");

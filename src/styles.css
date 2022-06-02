@@ -12,6 +12,12 @@ h1 {
   line-height: 28px;
   margin-bottom: 0;
 }
+h3 {
+  color: #383737;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 28px;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -26,8 +32,11 @@ li:first-letter {
   text-transform: capitalize;
 }
 a {
-  color: #007bff;
+  color: #dadde1;
   text-decoration: none;
+}
+footer {
+  color: #dadde1;
 }
 .container {
   padding-right: 15px;
@@ -40,18 +49,28 @@ a {
   margin: 30px auto;
 }
 .weather-app {
-  border: 1px solid #dadde1;
   padding: 50px;
   border-radius: 16px;
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.315);
   box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
 }
-
-.weather-overview {
+.form-control {
+  background-color: rgba(255, 255, 255, 0.486);
   margin-bottom: 20px;
-  margin-top: 50px;
 }
-.location {
+.search-button {
+  padding: 0 auto;
+}
+.current-location-button {
+  padding: 0;
+}
+.weather-overview {
+  padding: 20px 0;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.486);
+  border-radius: 20px;
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+  width: 45%;
   text-align: center;
 }
 .weather-temperature {
@@ -59,12 +78,12 @@ a {
   margin-bottom: 20px;
 }
 .weather-temperature img {
-  height: 80px;
-  width: 80px;
+  height: 44px;
+  width: 44px;
 }
 .weather-temperature .temperature {
   color: rgb(33, 33, 33);
-  font-size: 80px;
+  font-size: 44px;
   font-weight: 200;
   line-height: 1;
 }
@@ -83,14 +102,19 @@ a {
 .weather-details {
   color: #383737;
   font-weight: 100;
-  margin-bottom: 20px;
-  text-align: center;
-}
-.weather-forecast {
-  margin-top: 100px;
-  text-align: center;
+  margin-top: 50px;
+  text-align: left;
 }
 
+.weather-forecast {
+  margin-top: 0px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.486);
+  line-height: 28px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+  padding: 20px;
+}
 .weather-forecast-date {
   font-size: 16px;
   color: rgb(33, 33, 33);
@@ -98,9 +122,9 @@ a {
 .weather-forecast-temperatures {
   font-size: 16px;
 }
-.search-button {
-  padding: 0 auto;
+footer {
+  color: #dadde1;
 }
-.current-location {
-  padding: 0;
+a .footer-link {
+  color: #dadde1;
 }
