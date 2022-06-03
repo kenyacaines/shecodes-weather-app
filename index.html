@@ -13,6 +13,10 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
         crossorigin="anonymous"
       />
+      <script
+        src="https://kit.fontawesome.com/f54a0e22f7.js"
+        crossorigin="anonymous"
+      ></script>
       <link href="src/styles.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
@@ -28,26 +32,27 @@
                     id="city-input"
                     placeholder="Enter a city name"
                     autofocus="on"
-                    autocomplete="on"
+                    autocomplete="off"
                   />
                 </div>
                 <div class="col-3">
                   <button
-                    class="btn shadow-sm w-"
+                    class="btn shadow-sm w-4"
                     id="search-button"
                     type="submit"
                   >
-                    Search
+                    <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
-                  <span class="location-buton">
-                    <button
-                      class="btn shadow-sm w-2"
-                      id="current-location-button"
-                      type="submit"
-                    >
-                      📍
-                    </button>
-                  </span>
+                </span>
+                <span class="location-buton">
+                  <button
+                    class="btn shadow-sm w-2"
+                    id="current-location-button"
+                    type="submit"
+                  >
+                    <i class="fa-solid fa-location-dot"></i>
+                  </button>
+                </span>
                 </div>
               </div>
             </form>
@@ -62,7 +67,6 @@
                     src=""
                     alt="weather icon"
                     class="float-start"
-                    ;
                     id="weather-icon"
                   />
                   <div class="float-start">
