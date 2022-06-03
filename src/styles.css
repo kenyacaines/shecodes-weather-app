@@ -110,15 +110,17 @@ div .row .weather-details {
   border-right-style: solid;
   border-right-width: 2px;
 }
-
-.weather-forecast {
-  margin-top: 100px;
+.forecast-row {
+  margin-top: 25px;
+}
+.daily-weather-forecast {
+  background-color: #fff;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.486);
   line-height: 28px;
   border-radius: 20px;
   box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
-  padding: 20px;
+  padding: 20px 0 20px;
+  margin: 5px;
 }
 .weather-forecast-date {
   font-size: 16px;
@@ -126,4 +128,7 @@ div .row .weather-details {
 }
 .weather-forecast-temperatures {
   font-size: 16px;
+}
+.weather-forecast-max {
+  font-weight: 200;
 }
