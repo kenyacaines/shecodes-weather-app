@@ -90,14 +90,11 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#weather-icon");
 
-  fahrenheitTemperature = response.data.main.temp;
-  windSpeedImperial = response.data.wind.speed;
-
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].main;
   humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(windSpeedImperial);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
@@ -135,50 +132,10 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
-function displayCelsius(response) {
-  response.preventDefault();
-  let temperatureElement = document.querySelector("#temp");
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-  let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-
-  windSpeedMetricElement.removeAttribute("style");
-  windSpeedImperialElement.style.display = "none";
-  let windElement = document.querySelector("#wind-speed");
-  let windSpeedMetric = windSpeedImperial * 1.609344;
-  windElement.innerHTML = Math.round(windSpeedMetric);
-}
-
-function displayFahrenheit(response) {
-  response.preventDefault();
-  fahrenheitLink.classList.add("active");
-  celsiusLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temp");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-
-  windSpeedImperialElement.removeAttribute("style");
-  windSpeedMetricElement.style.display = "none";
-  let windElement = document.querySelector("#wind-speed");
-  windElement.innerHTML = Math.round(windSpeedImperial);
-}
-
-let fahrenheitTemperature = null;
-let windSpeedImperial = null;
-
-let windSpeedMetricElement = document.querySelector("#wind-metric");
-let windSpeedImperialElement = document.querySelector("#wind-imperial");
-
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocation = document.querySelector("#current-location-button");
 currentLocation.addEventListener("click", getCurrentPosition);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", displayCelsius);
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", displayFahrenheit);
 
 search("Austin");
