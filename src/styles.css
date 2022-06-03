@@ -38,6 +38,11 @@ a {
 footer {
   color: #dadde1;
 }
+div .row .weather-details {
+  color: #383737;
+  font-weight: 100;
+  margin-top: 50px;
+}
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -89,7 +94,6 @@ footer {
 .units {
   position: relative;
   font-size: 16px;
-  top: -24px;
 }
 .units .active {
   color: rgb(33, 33, 33);
@@ -99,20 +103,16 @@ footer {
   text-decoration: none;
 }
 .weather-details {
-  color: #383737;
-  font-weight: 100;
   margin-top: 50px;
-  text-align: left;
 }
-.vertical {
-  border-left: 6px solid black;
-  height: 200px;
-  position: absolute;
-  left: 50%;
+.with-border {
+  border-right-color: rgba(86, 61, 124, 0.2);
+  border-right-style: solid;
+  border-right-width: 2px;
 }
 
 .weather-forecast {
-  margin-top: 0px;
+  margin-top: 100px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.486);
   line-height: 28px;
@@ -126,10 +126,4 @@ footer {
 }
 .weather-forecast-temperatures {
   font-size: 16px;
-}
-footer {
-  color: #dadde1;
-}
-a .footer-link {
-  color: #dadde1;
 }

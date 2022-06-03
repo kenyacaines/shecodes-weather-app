@@ -72,25 +72,43 @@
                 <a href="#" id="celsius">°C </a>
               </div>
             </div>
-            <div class="row">
-              <div class="col-4"></div>
-              <div class="humidity-description">
-                Humidity: <span id="humidity"></span>%
+            <div class="container weather-details">
+            <div class="row justify-content-center">
+              <div class="col-4 with-border">
+                <i class="fa-solid fa-wind"></i>
+                <span class="wind-description">
+                  Wind
+                  <br>
+                  <span id="wind-speed">
+                  <span id="wind-imperial" style="display: inline">mph</span>
+                  <span id="wind-metric" style="display: none">km/h</span>
+                  </div>
+                </span>
               </div>
-            </div>
-            <div class="col-4">
-              <div class="wind-description">
-                Wind:
-                <span id="wind-speed"></span>
-                <span id="wind-imperial" style="display: inline">mph</span>
-                <span id="wind-metric" style="display: none">km/h</span>
+              <div class= "col-4">
+                <i class="fa-solid fa-temperature-high"></i>
+                <span class="class feels-like-description">
+                  Feels Like: <span id= "feels-like"></span>
+                </span>
               </div>
-            </div>
-            <div class="col-4">
-              <div class="vertical"></div>
-            </div>
+              </div>
+              <div class="row justify-content-center">
+              <div class="col-4 with-border">
+                <i class="fa-solid fa-droplet"></i>
+              <span class="humidity-description">
+                Humidity</span>
+                <br>
+              <span id="humidity"></span>%
+              </div>
+              <div class="col-4">
+                <i class="fa-solid fa-sun"></i>
+              <span class="class uv-index-description">
+                UV Index: <span id="uv-index"></span>
+                </span>
+                </div>
+              </div>
+              </div>
             <div class="weather-forecast" id="forecast"></div>
-          </div>
           <footer class="footer">
             <a
               class="footer-link"

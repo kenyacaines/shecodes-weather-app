@@ -26,11 +26,11 @@ function formatDate(timestamp) {
     "December",
   ];
 
-  let day = days[date.getDay()];
-  let date = date[date.getDate()];
-  let month = months[date.getMonth()];
+  let currentDay = days[date.getDay()];
+  let currentDate = [date.getDate()];
+  let currentMonth = months[date.getMonth()];
 
-  return `${day}, ${month}, ${date}`;
+  return `${currentDay}, ${currentMonth}, ${currentDate}`;
 }
 
 function formatDay(timestamp) {
