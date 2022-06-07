@@ -22,102 +22,98 @@
     <body>
       <div class="container">
         <div class="weather-app-wrapper">
-          <div class="weather-app">
-            <form id="search-form" class="mb-3">
-              <div class="row">
-                <div class="col-6">
-                  <input
-                    type="search"
-                    class="form-control shadow-sm"
-                    id="city-input"
-                    placeholder="Enter a city name"
-                    autofocus="on"
-                    autocomplete="off"
-                  />
-                </div>
-                <div class="col-3">
+          <form id="search-form" class="mb-3">
+            <div class="row justify-content-center">
+              <div class="col-4">
+                <input
+                  type="search"
+                  class="form-control shadow-sm"
+                  id="city-input"
+                  placeholder="Enter a city name"
+                  autofocus="on"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-2">
+                <button
+                  class="btn shadow-sm w-4"
+                  id="search-button"
+                  type="submit"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <span class="location-buton">
                   <button
-                    class="btn shadow-sm w-4"
-                    id="search-button"
+                    class="btn shadow-sm w-2"
+                    id="current-location-button"
                     type="submit"
                   >
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-location-dot"></i>
                   </button>
-                  <span class="location-buton">
-                    <button
-                      class="btn shadow-sm w-2"
-                      id="current-location-button"
-                      type="submit"
-                    >
-                      <i class="fa-solid fa-location-dot"></i>
-                    </button>
-                  </span>
-                </div>
-              </div>
-            </form>
-            <div class="weather-overview">
-              <div class="location">
-                <h1 id="city"></h1>
-                <h3 id="date"></h3>
-              </div>
-              <div class="weather-temperature-icon">
-                <img src="" alt="weather icon" id="weather-icon" />
-              </div>
-              <div>
-                <h3 id="description"></h3>
-              </div>
-              <div class="temperature" id="temp"></div>
-              <div class="units">
-                <a href="#" id="fahrenheit" class="active">°F</a> |
-                <a href="#" id="celsius">°C </a>
-              </div>
-            </div>
-            <div class="container weather-details">
-            <div class="row justify-content-center">
-              <div class="col-4 with-border">
-                <i class="fa-solid fa-wind"></i>
-                <span class="wind-description">
-                  Wind
-                  <br>
-                  <span id="wind-speed"></span> mph
                 </span>
               </div>
-              <div class= "col-4">
-                <i class="fa-solid fa-temperature-high"></i>
-                <span class="class feels-like-description">
-                  Feels Like</span>
-                  <br> 
-                  <span id= "feels-like"></span>°F
-              </div>
-              </div>
+            </div>
+          </form>
+          <div class="weather-overview">
+            <div class="location">
+              <h1 id="city"></h1>
+              <h3 id="date"></h3>
+            </div>
+            <div>
+              <img src="" alt id="weather-icon" />
+            </div>
+            <div>
+              <h2 id="description"></h2>
+            </div>
+            <div>
+              <span class="temperature" id="temp"></span>
+              <span class="degrees-fahrenheit">°F</span>
+            </div>
+            <div class="container weather-details">
               <div class="row justify-content-center">
-              <div class="col-4 with-border">
-                <i class="fa-solid fa-droplet"></i>
-              <span class="humidity-description">
-                Humidity</span>
-                <br>
-              <span id="humidity"></span>%
-              </div>
-              <div class="col-4">
-                <i class="fa-solid fa-sun"></i>
-              <span class="class uv-index-description">
-                UV Index</span>
-                <br>
-                <span id="uv-index"></span>
+                <div class="col-3 with-border">
+                  <i class="fa-solid fa-wind" id="wind-icon"></i>
+                  <span class="full-description"> Wind </span>
+                  <br />
+                  <span id="wind-speed"></span> mph
+                </div>
+                <div class="col-3">
+                  <i
+                    class="fa-solid fa-temperature-high"
+                    id="feels-like-icon"
+                  ></i>
+                  <span class="full-description"> Feels Like</span>
+                  <br />
+                  <span id="feels-like"></span>°F
                 </div>
               </div>
+              <div class="row justify-content-center">
+                <div class="col-3 with-border">
+                  <i class="fa-solid fa-droplet" id="humidity-icon"></i>
+                  <span class="full-description"> Humidity</span>
+                  <br />
+                  <span id="humidity"></span>%
+                </div>
+                <div class="col-3">
+                  <i class="fa-solid fa-sun" id="uv-index-icon"></i>
+                  <span class="full-description"> UV Index</span>
+                  <br />
+                  <span id="uv-index"></span>
+                </div>
               </div>
-            <div class="weather-forecast" id="forecast"></div>
             </div>
-          <footer class="footer">
-            <a
-              class="footer-link"
-              href="https://github.com/kenyacaines/shecodes-weather-app"
-              target="_blank"
-              >Open-source code</a
-            >, by Kenya Caines
-          </footer>
+          </div>
+          <div class="weather-forecast" id="forecast"></div>
+        </div>
       </div>
+      <footer class="footer">
+        <a
+          class="footer-link"
+          href="https://github.com/kenyacaines/shecodes-weather-app"
+          target="_blank"
+          >Open-source code</a
+        >, by Kenya Caines
+      </footer>
       <script src="src/app.js"></script>
     </body>
   </html>
