@@ -18,7 +18,7 @@ h2 {
   font-weight: 400;
   line-height: 28px;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 45px;
 }
 h3 {
   color: #383737;
@@ -51,8 +51,14 @@ footer {
 div .weather-details {
   color: #383737;
   font-weight: 100;
-  margin-top: 50px;
+  margin-top: 40px;
   margin-bottom: 40px;
+}
+img {
+  height: 80px;
+  width: 80px;
+  font-size: 44px;
+  margin-bottom: 0px;
 }
 
 .container {
@@ -90,21 +96,16 @@ div .weather-details {
   text-align: center;
 }
 
-.weather-temperature-icon img {
-  height: 80px;
-  width: 80px;
-  font-size: 44px;
-  margin-bottom: 0;
-}
 .temperature {
   color: rgb(33, 33, 33);
-  font-size: 44px;
+  font-size: 54px;
   font-weight: 400;
   line-height: 1;
+  margin-left: 18px;
 }
-.degrees-fahrenheit {
-  font-size: 12px;
-  margin-top: -34px;
+.units {
+  position: relative;
+  top: -20px;
 }
 .col-2 {
   width: 19%;
@@ -118,9 +119,20 @@ div .weather-details {
   border-right-style: solid;
   border-right-width: 2px;
 }
+.full-description#wind-icon-description {
+  margin-right: 15px;
+}
 
 span#wind-speed {
-  padding-left: 48px;
+  padding-left: 25px;
+}
+
+.svg-inline--fa.fa-wind#wind-icon {
+  margin-right: 3px;
+}
+
+.svg-inline--fa.fa-sun#uv-index-icon {
+  margin-right: 6px;
 }
 .forecast-row {
   margin-top: 50px;
@@ -145,6 +157,9 @@ span#wind-speed {
 .weather-forecast-temperatures {
   font-size: 16px;
 }
-.weather-forecast-max {
+#weather-forecast-temperature-max {
   font-weight: 200;
+}
+.weather-forecast-temperature-min {
+  font-weight: 100;
 }
