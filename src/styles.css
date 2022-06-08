@@ -42,6 +42,10 @@ li:first-letter {
 }
 a {
   color: #dadde1;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 footer {
   color: #dadde1;
